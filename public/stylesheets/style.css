@@ -1,3 +1,11 @@
+@font-face{
+    src: url("/fonts/CRENZO.ttf") format ("truetype");
+    font-family: "Crenzo";
+    font-style: "normal";
+    font-weight: "normal";
+
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&family=Work+Sans&display=swap');
 @import './variables.css';
 @import './general.css';
