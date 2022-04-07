@@ -3,24 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftsy | Login</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Document</title>
 </head>
-<body>
+<body class="login">
     <header>
-        <a href="/"><img class="header__logo" src="/images/logo.png" alt="">
-         <nav class="header__menu">
-             <ul class="header__menu__sitio">
-                 <li><a href="">Smartphone</a></li>
-                 <li><a href="">Tablets</a></li>
-                 <li><a href="">Computadoras</a></li>
-             </ul>
-             <ul class="header__menu__usuarios">
-                 <li><a href="/register">Registro</a></li>
-                 <li><a href="/login">Login</a></li>
-             </ul>
-         </nav>
-     </header>
+        <div class="header__logo">
+            <a href="/"><img src="/images/logo.png" alt=""></a>
+        </div>
+
+        <nav class="header__menu">
+            <ul class="header__menu__sitio">
+                <li><a href="">Smartphone</a></li>
+                <li><a href="">Tables</a></li>
+                <li><a href="">Computadoras</a></li>
+            </ul>
+            <ul class="header__menu__usuarios">
+                <li><a href="/register">Registro</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main >
+        <section>
+            <h1>Ingresá</h1>
+            <hr>
+            <form>
+                <article>
+
+                <div class="login__form-box">
+                    <label for="email">Email</label>
+                    <input class="login__form-input" type="email" id="email" name="email" placeholder="Escribí tu email">
+                     <span class="login__text-error">Obligatorio</span>
+                </div>
+                <div class="login__form-box">
+                    <label for="password">Contraseña</label>
+                    <input class="login__form-input" type="password" id="password" name="password" placeholder="Escribí tu contraseña">
+                     <span class="login__text-error">Obligatorio</span>
+                </div>
+              
+                <div class="login__form-box login__center">
+                    <input class="" type="checkbox" name="recordame" id="recordame">
+                <label for="recordame">Recordame</label>
+                </div>
+                <div class="login__form-box login__center">
+
+                <button type="submit">Ingresar</button>
+                
+                </div>
+            </article>
+
+            </form>
+
+        </section>
+
+    </main>
 </body>
 </html>
