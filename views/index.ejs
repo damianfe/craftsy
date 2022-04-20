@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craftsy | Home</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+<%- include('./partials/head',{
+    title : 'Home'
+}) %> 
 
 <body class="index">
-    <header>
-        <div class="header__logo">
-            <a href="/"><a href=""><img src="/images/logo.png" alt=""></a></a>
-        </div>
 
-        <nav class="header__menu">
-            <ul class="header__menu__sitio">
-                <li><a href="">Smartphone</a></li>
-                <li><a href="">Tables</a></li>
-                <li><a href="">Computadoras</a></li>
-            </ul>
-            <ul class="header__menu__usuarios">
-                <li><a href="/users/register">Registro</a></li>
-                <li><a href="/users/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('./partials/header') %> 
+    <section class="index__banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="index__carousel-item carousel-item active" style="background-image: url('/images/banner/banner_1.jpg');">
+              </div>
+              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_2.jpg');">
+              </div>
+              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_3.jpg');">
+              </div>
+              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_4.jpg');">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
     <main>
         <section class="index__products">
             <article class="index__products__product">
-                <a href=""><img src="/images/img-phone-01.jpg" alt=""></a>
+                <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
                 <h4>Nombre del producto</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus ipsa
                     praesentium?</p>
                 <a href="#" class="index__products__product__more">VER MÁS</a>
             </article>
             <article class="index__products__product">
-                <a href=""><img src="/images/img-phone-02.jpg" alt=""></a>
+                <a href="/products/detail/2"><img src="/images/img-phone-02.jpg" alt=""></a>
                 <h4>Nombre del producto</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus ipsa
                     praesentium?</p>
                 <a href="#" class="index__products__product__more">VER MÁS</a>
             </article>
             <article class="index__products__product">
-                <a href=""><img src="/images/img-phone-03.jpg" alt=""></a>
+                <a href="/products/detail/3"><img src="/images/img-phone-03.jpg" alt=""></a>
                 <h4>Nombre del producto</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus ipsa
                     praesentium?</p>
@@ -97,6 +106,8 @@
             </section>
         </aside>
     </main>
+    <%- include('./partials/footer') %> 
+
 </body>
 
 </html>
