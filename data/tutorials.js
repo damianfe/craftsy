@@ -1,14 +1,14 @@
 module.exports = [
     {
         name : "Reparar celulares",
-        img : "aside-01.jpg"
+        img : "aside-03.jpg"
     },
     {
         name : "Reparar tablets",
-        img : "aside-02.jpg"
+        img : "aside-01.jpg"
     },
     {
         name : "Reparar computadoras",
-        img : "aside-03.jpg"
+        img : "aside-02.jpg"
     },
 ]
