@@ -1,8 +1,10 @@
+
+  
 const express = require('express');
 const router = express.Router();
 
 //const controlador = require('../controllers/productController')
-const {cart,detail,getByCategory, search, add, store,edit, update} = require('../controllers/productController');
+const {cart,detail,getByCategory, search, add, store,edit, update,remove} = require('../controllers/productController');
 
 /* /products */
 router
@@ -14,5 +16,6 @@ router
     .get('/detail/:id', detail)
     .get('/category/:idCategory/:idProduct?',getByCategory)
     .get('/search',search)
+    .delete('/remove/:id',remove)
 
 module.exports = router;
