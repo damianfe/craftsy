@@ -48,9 +48,9 @@
                 <section class="index__products">
                     <h4>Celulares</h4>
 
-                    <% celulares.forEach(({name,id})=> { %>
+                    <% celulares.forEach(({name,id,img})=> { %>
                         <article class="index__products__product">
-                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <a href="/products/detail/<%= id %>"><img src="/images/<%= img %>" alt=""></a>
                             <h4>
                                 <%= name %>
                             </h4>
@@ -63,7 +63,6 @@
                 </section>
                 <section class="index__products">
                     <h4>Tablets</h4>
-
                     <% tablets.forEach(({name,id})=> { %>
                         <article class="index__products__product">
                             <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
@@ -79,7 +78,6 @@
                 </section>
                 <section class="index__products">
                     <h4>Computadoras</h4>
-
                     <% computadoras.forEach(({name,id})=> { %>
                         <article class="index__products__product">
                             <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
@@ -104,8 +102,6 @@
                                 </p>
                             </article>
                             <% }) %>
-
-
                     </section>
                     <section class="index__advertising">
                         <h3>Publicidad</h3>
@@ -117,7 +113,5 @@
                 </aside>
             </main>
             <%- include('./partials/footer') %>
-
     </body>
-
 </html>

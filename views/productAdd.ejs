@@ -11,103 +11,66 @@
 
     <main>
         <section>
-            <h2>Agregar Producto</h2>
+            <div class="d-flex justify-content-between">
+                <h2>Agregar Producto</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="visible" name="visible" checked>
+                        <label class="form-check-label" for="visible">
+                          Visible
+                        </label>
+                      </div>
+            </div>
             <hr>
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <article>
-                <div class="register__form-box">
-                    <label for="name">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="name" name="name">
-                </div>
-                <div class="register__form-box">
-                    <label for="price">Precio</label>
-                    <input class="register__form-input" type="number" id="price" name="price">
-                </div>
-         
-                <div class="register__form-box">
-                        <label for="category">Categorias</label>
-                        <select class="register__form-select" name="category" id="category">
-                            <option value="" hidden selected>Selecciona la categoría...</option>
-                          <% categories.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.name %></option>
-                          <% }) %>
-                        </select>
-                       
-                </div>
-              
-            </article>
-               
-                <button type="submit">Guardar</button>
-              
-                    <button type="reset">Limpiar</button>
-                </div>
-            </form>
-        </section>
-
-    </main>
-
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-    <%- include('./partials/head',{
-        title : 'Nuevo producto'
-    })  %> 
-
-
-<body class="register">
-    <%- include('./partials/header') %> 
-
-    <main>
-        <section>
-            <h2>Agregar Producto</h2>
-            <hr>
-            <form method="POST" action="">
-                <article>
-                <div class="register__form-box">
-                    <label for="name">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="name" name="name">
-                </div>
-                <div class="register__form-box">
-                    <label for="price">Precio</label>
-                    <input class="register__form-input" type="number" id="price" name="price">
-                </div>
-         
-                <div class="register__form-box">
-                        <label for="category">Categorias</label>
-                        <select class="register__form-select" name="category" id="category">
-                            <option value="" hidden selected>Selecciona la categoría...</option>
-                          <% categories.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.name %></option>
-                          <% }) %>
-                        </select>
-                </div>
-                <div class="register__form-box">
-                    <div class="d-flex align-content-center">
-                        <div>
-                            <label for="origin">Origen</label>
-                            <input class="register__form-input" type="text" id="origin" name="features">
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="in-box" name="features">
-                            <label class="form-check-label" for="in-box">
-                              Original
-                            </label>
-                          </div>
-                    </div>
-                  
-                  
-                </div>
-                <div class="register__form-box">
                     
+                <div class="register__form-box">
+                    <label for="name">Nombre del producto</label>
+                    <input class="register__form-input" type="text" id="name" name="name">
                 </div>
+                <div class="register__form-box">
+                    <label for="price">Precio</label>
+                    <input class="register__form-input" type="number" id="price" name="price">
+                </div>
+         
+                <div class="register__form-box">
+                        <label for="category">Categorias</label>
+                        <select class="register__form-select" name="category" id="category">
+                            <option value="" hidden selected>Selecciona la categoría...</option>
+                          <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.name %></option>
+                          <% }) %>
+                        </select>
+                </div>
+                <div class="register__form-box">
+                    <label for="origin">Origen</label>
+                    <select class="register__form-select" name="origin" id="origin">
+                        <option value="" hidden selected>Selecciona el origen...</option>
+                        <option value="china">China</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Taiwan">Taiwan</option>
+                    </select>
+                </div>
+                <div class="register__form-box">
+                    <label for="state">Estado</label>
+                    <select class="register__form-select" name="state" id="state">
+                        <option value="" hidden selected>Selecciona el origen...</option>
+                        <option value="nuevo">Nuevo</option>
+                        <option value="refaccionado">Refaccionado</option>
+                    </select>
+                </div>
+                <div class="register__form-box">
+                  <label for="image">Imagen</label>
+                  <input class="register__form-input" type="file" id="image" name="image" accept="image/*">
+              </div>
               
             </article>
                
-                <button type="submit">Guardar</button>
-              
-                    <button type="reset">Limpiar</button>
+            <div class="register__form-box d-flex justify-content-end align-items-end">
+                <button type="reset" class="me-2 btn btn-secondary">Limpiar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
                 </div>
             </form>
         </section>
