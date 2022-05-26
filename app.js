@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 const methodOverride = require('method-override');
 const session = require('express-session');
+const localsCheck = require('./middlewares/localsCheck');
+const cookieCheck = require('./middlewares/cookieCheck');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -35,17 +37,15 @@ app.use(session({
 
 }));
 
+app.use(localsCheck);
+app.use(cookieCheck);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/categories', categoriesRouter);
 
 
-/* app.get('/',(req,res) => res.sendFile(path.resolve(__dirname,'views','index.html')));
-app.get('/product-detail',(req,res) => res.sendFile(path.resolve(__dirname,'views','productDetail.html')));
-app.get('/product-cart',(req,res) => res.sendFile(path.resolve(__dirname,'views','productCart.html')));
-app.get('/register',(req,res) => res.sendFile(path.resolve(__dirname,'views','register.html')));
-app.get('/login',(req,res) => res.sendFile(path.resolve(__dirname,'views','login.html'))); */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
